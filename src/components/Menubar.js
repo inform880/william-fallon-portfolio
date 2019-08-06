@@ -55,12 +55,14 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "flex-end"
   },
   link: {
-    textDecoration: "none"
+    textDecoration: "none",
+    color: "white"
   }
 }));
 
 const links = [
-  { text: "Projects", icon: <ToysIcon />, link: "/" },
+  { text: "Home", icon: <ToysIcon />, link: "/" },
+  { text: "Projects", icon: <ToysIcon />, link: "/projects" },
   { text: "Code Snippets", icon: <ToysIcon />, link: "codesnippets" },
   { text: "Work History", icon: <ToysIcon />, link: "workhistory" }
 ];
@@ -113,7 +115,7 @@ export const Menubar = ({ handleDrawerOpen, handleDrawerClose, open }) => {
         <Divider />
         <List>
           {links.map(({ text, icon, link }, index) => (
-            <Link to={link} className={classes.link}>
+            <Link key={text} to={link} className={classes.link}>
               <ListItem button key={text}>
                 <ListItemIcon>{icon}</ListItemIcon>
                 <ListItemText primary={text} />
