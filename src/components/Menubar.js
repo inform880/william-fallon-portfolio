@@ -15,9 +15,13 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import MenuIcon from "@material-ui/icons/Menu";
 import ToysIcon from "@material-ui/icons/Toys";
+import HomeIcon from "@material-ui/icons/Home";
+import WorkIcon from "@material-ui/icons/Work";
+import AssessmentIcon from "@material-ui/icons/Assessment";
 import { Link } from "react-router-dom";
+import GithubCorner from "react-github-corner";
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const useStyles = makeStyles(theme => ({
   appBar: {
@@ -37,12 +41,8 @@ const useStyles = makeStyles(theme => ({
   menuButton: {
     marginRight: theme.spacing(2)
   },
-  hide: {
-    display: "none"
-  },
   drawer: {
-    width: drawerWidth,
-    flexShrink: 0
+    width: drawerWidth
   },
   drawerPaper: {
     width: drawerWidth
@@ -61,10 +61,10 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const links = [
-  { text: "Home", icon: <ToysIcon />, link: "/" },
-  { text: "Projects", icon: <ToysIcon />, link: "/projects" },
+  { text: "Home", icon: <HomeIcon />, link: "/" },
+  { text: "Projects", icon: <AssessmentIcon />, link: "/projects" },
   { text: "Code Snippets", icon: <ToysIcon />, link: "codesnippets" },
-  { text: "Work History", icon: <ToysIcon />, link: "workhistory" }
+  { text: "Work History", icon: <WorkIcon />, link: "workhistory" }
 ];
 
 export const Menubar = ({ handleDrawerOpen, handleDrawerClose, open }) => {
@@ -89,9 +89,6 @@ export const Menubar = ({ handleDrawerOpen, handleDrawerClose, open }) => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap>
-            William Fallon's Portfolio
-          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -124,6 +121,12 @@ export const Menubar = ({ handleDrawerOpen, handleDrawerClose, open }) => {
           ))}
         </List>
       </Drawer>
+      <GithubCorner
+        ariaLabel="Open William Fallon's Github Profile"
+        svgStyle={{ top: "64px" }}
+        size={60}
+        href="https://github.com/inform880/"
+      />
     </>
   );
 };

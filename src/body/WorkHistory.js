@@ -44,8 +44,8 @@ export const WorkHistory = () => {
         bubbleStyle={{ backgroundColor: "#303030", borderColor: "#3f51b5" }}
       >
         <Typography>
-          Worked at Cumulus Consulting, LLC among several teams as a full-time
-          full stack developer
+          Worked at Cumulus Consulting, LLC among several teams as a full stack
+          developer
           <li>
             Used React Native to develop Android and iOS applications for shop
             floor level manufacturing processes
@@ -100,8 +100,7 @@ export const WorkHistory = () => {
           </li>
           <li>
             Solved logistical code challenges present in an old financial
-            establishment with many people working across different projects and
-            across the world
+            establishment with many people working across different projects
           </li>
           <li>Adopted and significantly improved old codebases </li>
         </Typography>
