@@ -1,7 +1,7 @@
 {
-  "name": "new-portfolio-site",
-  "version": "1.0.0",
-  "description": "",
+  "name": "william-fallon-portfolio",
+  "version": "1.0.1",
+  "description": "A portfolio site for William Fallon",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
@@ -23,10 +23,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
 }
