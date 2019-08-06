@@ -8,7 +8,7 @@ export const Home = () => {
         I'm William Fallon, a full stack developer.
       </Typography>
       <Typography gutterBottom variant="h3">
-        I have experience in startups, corporate, and freelance work. You can
+        I have experience in startup, corporate, and freelance work. You can
         reach me on{" "}
         <a
           href="https://www.linkedin.com/in/william-f-7411a2124/"
