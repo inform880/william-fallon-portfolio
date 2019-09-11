@@ -122,8 +122,8 @@ export const Menubar = ({ handleDrawerOpen, handleDrawerClose, open }) => {
       </Drawer>
       <GithubCorner
         ariaLabel="Open William Fallon's Github Profile"
-        svgStyle={{ top: "64px" }}
-        size={60}
+        svgStyle={{ zIndex: "10000" }}
+        size={65}
         href="https://github.com/inform880/"
       />
     </>

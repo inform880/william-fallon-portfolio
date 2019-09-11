@@ -7,7 +7,7 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 
 const useStyles = makeStyles({
   card: {
-    marginBottom: "20px"
+    margin: "50px"
   },
   link: {
     textDecoration: "none",

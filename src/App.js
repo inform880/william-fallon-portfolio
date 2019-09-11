@@ -4,9 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import { Menubar } from "./components/Menubar";
 import { Body } from "./body/Body";
-import { Container } from "@material-ui/core";
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -16,12 +15,11 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
     padding: "0 8px",
-    ...theme.mixins.toolbar,
+    minHeight: "64px",
     justifyContent: "flex-end"
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing(3),
     transition: theme.transitions.create("margin", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen
@@ -57,16 +55,14 @@ export const App = () => {
         open={open}
         setOpen={setOpen}
       />
-      <main
+      <div
         className={clsx(classes.content, {
           [classes.contentShift]: open
         })}
       >
         <div className={classes.drawerHeader} />
-        <Container>
-          <Body />
-        </Container>
-      </main>
+        <Body />
+      </div>
     </div>
   );
 };
