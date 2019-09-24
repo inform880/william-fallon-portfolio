@@ -8,21 +8,15 @@ import "react-typist/dist/Typist.css";
 const useStyles = makeStyles(theme => ({
   link: { color: "lightblue" },
   image: {
-    minWidth: "600px",
-    overflow: "hidden",
     width: "100%",
-    zIndex: -1,
-    height: "100vh"
+    height: "100vh",
+    backgroundImage: `url(${DetroitSkyline})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat"
   },
   headerText: {
-    position: "absolute",
-    top: "100px",
-    left: "50px"
-  },
-  middleText: {
-    position: "absolute",
-    top: "400px",
-    left: "50px"
+    padding: "50px"
   },
   infoText: {
     margin: "50px"
@@ -34,16 +28,11 @@ export const Home = () => {
   return (
     <>
       <div>
-        <img
-          className={classes.image}
-          src={DetroitSkyline}
-          alt="Detroit Skyline"
-        />
         <Typist cursor={{ show: false }} avgTypingDelay={40}>
           <Typography className={classes.headerText} variant="h1">
             I'm William Fallon, a full stack developer.
           </Typography>
-          <Typography className={classes.middleText} gutterBottom variant="h3">
+          <Typography className={classes.headerText} gutterBottom variant="h3">
             I have experience in startup, corporate, and freelance work. You can
             reach me on{" "}
             <a
